@@ -1,5 +1,5 @@
 const container = (theme) => ({
-  backgroundColor: '#28585d',
+  backgroundColor: '#fff',
   height: '100vh',
   pb: '3rem',
   [theme.breakpoints.down('md')]: {
@@ -36,7 +36,7 @@ const rectangle = {
 }
 
 const myName = (theme) => ({
-  color: '#d7d7d7',
+  color: '#777777',
   fontWeight: '600',
   fontFamily: 'Poppins',
   fontSize: '70px',
@@ -60,12 +60,23 @@ const myTitleConteiner = {
 
 const flor = (color, rotate) => ({
   backgroundColor: `#${color}`,
-  position: 'absolute', 
-  width: '40%', 
-  height: '30%', 
-  borderRadius: '100%', 
+  position: 'absolute',
+  width: '40%',
+  height: '30%',
+  borderRadius: '100%',
   transform: `rotate(${rotate}deg)`
 })
+
+const contactbtn = {
+  backgroundColor: '#1ca99c',
+  textTransform: 'capitalize',
+  p: '8px 30px',
+  fontFamily: 'Poppins',
+  borderRadius: '20px',
+  '&:hover': {
+    backgroundColor: '#23B6A8',
+  }
+}
 
 const styles = {
   container,
@@ -75,7 +86,8 @@ const styles = {
   gridContainer,
   infoContainer,
   myTitleConteiner,
-  flor
+  flor,
+  contactbtn
 }
 
 export default styles

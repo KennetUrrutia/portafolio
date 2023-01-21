@@ -2,10 +2,11 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import styles from './styles'
 // import devBackground from '../../assets/devBackground.jpg'
 import esfera from '../../assets/esfera.png'
+import { useLocationCustomHook } from '../../hooks/useLocationCustomHook'
 
 const crearFlor = () => {
   let mapIndex = ['AA', 'BB', 'CC', 'DD', 'FF', 'GG']
-  
+
   return mapIndex.map((item, i) => (
     <Box
       key={item}
@@ -15,7 +16,7 @@ const crearFlor = () => {
 }
 
 export const Inicio = () => {
-
+  const {handleNavigate} = useLocationCustomHook()
   return (
     <Box sx={styles.container}>
       <Grid container sx={styles.gridContainer}>
@@ -39,7 +40,11 @@ export const Inicio = () => {
               >
                 Kennet Alexander de León Urrutia
               </Typography>
-              <Button variant='outlined'>
+              <Button
+                variant='contained'
+                sx={styles.contactbtn}
+                onClick={() => handleNavigate('/contacto')}
+              >
                 Contácto
               </Button>
             </Box>

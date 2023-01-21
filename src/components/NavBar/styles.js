@@ -1,6 +1,6 @@
 const appBar = (theme) => ({
   background: 'none',
-  // backdropFilter: 'invert(90%)',
+  backdropFilter: 'invert(90%)',
   padding: '0 5rem',
   [theme.breakpoints.down('md')]: {
     padding: '0',
@@ -28,7 +28,7 @@ const logo = {
 const navLiksContainer = (theme) => ({
   width: '30rem',
   display: 'flex',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
   alignItems: 'center',
   [theme.breakpoints.down('lg')]: {
     width: '70%',
@@ -41,7 +41,7 @@ const navLink = (isActive) => ({
   justifyContent: 'center',
   padding: '10px',
   textDecoration: 'none',
-  color: isActive ? '#1ca99c': 'white',
+  color: isActive ? '#1ca99c' : 'white',
   fontFamily: 'Poppins',
   fontWeight: isActive ? '700' : '600',
   display: 'flex',

@@ -1,11 +1,10 @@
-import { Box, Link, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import styles from './styles'
-import { pages } from '../../data/pages'
 
 export const Footer = () => {
 

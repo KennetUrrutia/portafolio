@@ -1,22 +1,19 @@
-import { Menu, MenuItem } from '@mui/material'
+import { Menu } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { useDropdownSettings } from '../../hooks/main'
 import styles from './styles'
 
-export const DropdownMenu = (props) => {
-  const { subPages, to, name } = props
-  const { anchorEl, handleClose, handleCloseAndNavigate, handleMenu } = useDropdownSettings()
+export const DropdownMenu = ({ to, name }) => {
+  const { anchorEl, handleClose } = useDropdownSettings()
 
   return (
     <>
       <NavLink
         key={name}
         style={({ isActive }) => styles.navLink(isActive)}
-        onClick={subPages && handleMenu}
-        to={!subPages && to}
+        to={to}
       >
-        {name} {subPages && <ExpandMoreIcon />}
+        {name}
       </NavLink>
       <Menu
         id='menu-appbar'
@@ -33,16 +30,6 @@ export const DropdownMenu = (props) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {subPages &&
-          subPages.map(subPage => (
-            <MenuItem
-              key={subPage.name}
-              onClick={() => handleCloseAndNavigate(subPage.to)}
-            >
-              {subPage.name}
-            </MenuItem>
-          ))
-        }
       </Menu>
 
     </>
