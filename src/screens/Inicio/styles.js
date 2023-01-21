@@ -58,6 +58,15 @@ const myTitleConteiner = {
   justifyContent: 'center',
 }
 
+const flor = (color, rotate) => ({
+  backgroundColor: `#${color}`,
+  position: 'absolute', 
+  width: '40%', 
+  height: '30%', 
+  borderRadius: '100%', 
+  transform: `rotate(${rotate}deg)`
+})
+
 const styles = {
   container,
   rectangle,
@@ -65,7 +74,8 @@ const styles = {
   myName,
   gridContainer,
   infoContainer,
-  myTitleConteiner
+  myTitleConteiner,
+  flor
 }
 
 export default styles
