@@ -1,6 +1,6 @@
 const appBar = (theme) => ({
   background: 'none',
-  // backdropFilter: 'invert(70%)',
+  // backdropFilter: 'invert(90%)',
   padding: '0 5rem',
   [theme.breakpoints.down('md')]: {
     padding: '0',
@@ -41,13 +41,12 @@ const navLink = (isActive) => ({
   justifyContent: 'center',
   padding: '10px',
   textDecoration: 'none',
-  color: '#e1e1df',
+  color: isActive ? '#1ca99c': 'white',
   fontFamily: 'Poppins',
   fontWeight: isActive ? '700' : '600',
   display: 'flex',
   alignItems: 'center',
-  border: isActive && '1px solid',
-  backgroundColor: isActive && `rgba(174,182,181, 0.2)`
+  border: isActive && '1px solid #1ca99c',
 })
 
 const menuIcon = {

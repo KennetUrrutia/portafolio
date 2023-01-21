@@ -1,13 +1,13 @@
 const container = (theme) => ({
   width: '100%',
-  height: '17rem',
+  height: '20rem',
   [theme.breakpoints.down('md')]:{
     height: '25rem',
   }
 })
 
 const topContainer = {
-  backgroundColor: '#21211f',
+  backgroundColor: '#24242a',
   width: '100%',
   height: '77%',
   display: 'flex',
@@ -60,7 +60,7 @@ const socialMediaIcon = {
 const bottomContainer = {
   width: '100%',
   height: '25%',
-  backgroundColor: '#1d1d1c',
+  backgroundColor: '#1c1c1c',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

@@ -23,7 +23,7 @@ export const NavBar = () => {
   }, [location])
 
   return (
-    <AppBar position='absolute' elevation={0} sx={styles.appBar}>
+    <AppBar position='fixed' elevation={0} sx={styles.appBar}>
       <Toolbar sx={styles.toolbarContainer}>
         {
           isMatch ? <DrawerComponent pages={pages} blackOrWhiteIcon={customTorF} />
